@@ -18,6 +18,7 @@
     main .topbar .filter-bar {
         width: 74em;
         padding-inline: 3em;
+        margin-top:-2.6em;
     }
 
     main .all-sections .section {
