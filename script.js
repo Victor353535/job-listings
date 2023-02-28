@@ -115,7 +115,6 @@ fetchData()
             filterBar.insertAdjacentElement('beforeend', filterTablet);
             const removeButton = filterTablet.querySelector('.remove-icon');
             removeFilterTablet(removeButton);
-            filterBarPositioning();
         }
 
         // All sections are displayed
@@ -142,7 +141,6 @@ fetchData()
                 filterTablet.remove();
                 filterBar.textContent.trim() === 'Clear' ? clearAllFilters() : null;
                 filterSections();
-                filterBarPositioning();
             });
         };
 
@@ -154,7 +152,6 @@ fetchData()
             filtersAdded = {};
             hideFilterBar()
             allSectionsAppear();
-            filterBarPositioning();
         };
 
         // Clear button activates clearAllFilters function which clears all elements within the filterBar.
@@ -162,22 +159,7 @@ fetchData()
             e.preventDefault();
             clearAllFilters();
         });
-
-        // Ternary operator to set the margin-top style property of output element based on the number of child elements in a filterBar element and the width of the screen.
-        function filterBarPositioning() {
-            const mediaQuery = window.matchMedia('(max-width: 1440px)');
-            mediaQuery.matches
-                ? filterBar.childElementCount === 1
-                    ? output.style.marginTop = '0em'
-                    : filterBar.childElementCount === 2 || filterBar.childElementCount === 3
-                        ? output.style.marginTop = '5em'
-                        : filterBar.childElementCount === 4 || filterBar.childElementCount === 5
-                            ? output.style.marginTop = '8em'
-                            : output.style.marginTop = '11em'
-                : null;
-        }
     })
     .catch(error => {
         console.error(error);
     });
-
