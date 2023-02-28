@@ -21,7 +21,7 @@ async function fetchData() {
 fetchData()
     .then(data => {
 
-        // Create a DocumentFragment to hold the new HTML elements
+        // Create a DocumentFragment to hold the new HTML elements for more optimisation
         const fragment = document.createDocumentFragment();
 
         data.map((e) => {
@@ -94,6 +94,10 @@ fetchData()
             clear.style.display = 'none';
         }
 
+        function allSectionsAppear() {
+            allSections.forEach(e => e.style.display = 'flex');
+        };
+
         // A clicked filter button triggers filter bar in which appears filter button content with a remove icon
         filterTablets.forEach((e) => {
             e.addEventListener('click', (i) => {
@@ -117,12 +121,9 @@ fetchData()
             removeFilterTablet(removeButton);
         }
 
-        // All sections are displayed
-        function allSectionsAppear() {
-            allSections.forEach(e => e.style.display = 'flex');
-        };
 
-        // Filters all sections whether thay include filter content or not. 
+
+        // Filters all sections whether thay include filter. 
         function filterSections() {
             const filterContents = Object.keys(filtersAdded);
             allSections.forEach((section) => {
