@@ -49,13 +49,14 @@ main .topbar .topbar-background {
     object-position: center;
 }
 
-main .topbar .filter-bar {
+main .filter-bar {
     position: relative;
     display: none;
     flex-wrap: wrap;
-    margin-top: 2.6em;
+    margin-top: -5.6em;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 2.5em;
     gap: 1em 2.6em;
     width: 22em;
     background-color: white;
@@ -63,7 +64,7 @@ main .topbar .filter-bar {
     padding: 1.3em 1.5em;
 }
 
-main .topbar .filter-bar .filter {
+main .filter-bar .filter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +77,7 @@ main .topbar .filter-bar .filter {
     transition: all .2s;
 }
 
-main .topbar .filter-bar .filter-button {
+main .filter-bar .filter-button {
     position: relative;
     display: flex;
     align-items: center;
@@ -91,7 +92,7 @@ main .topbar .filter-bar .filter-button {
 }
 
 
-main .topbar .filter-bar .filter-button .remove-icon {
+main .filter-bar .filter-button .remove-icon {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -105,11 +106,11 @@ main .topbar .filter-bar .filter-button .remove-icon {
     transition: all .2s;
 }
 
-main .topbar .filter-bar .filter-button .remove-icon:hover {
+main .filter-bar .filter-button .remove-icon:hover {
     background-color: black;
 }
 
-main .topbar .filter-bar .clear {
+main .filter-bar .clear {
     position: absolute;
     display: none;
     right: 1em;
@@ -126,11 +127,11 @@ main .topbar .filter-bar .clear {
     transition: all .2s;
 }
 
-main .topbar .filter-bar .clear:hover {
+main .filter-bar .clear:hover {
     color: var(--desaturated-dark-cyan);
 }
 
-main .topbar .filter-bar .clear::before {
+main .filter-bar .clear::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -141,7 +142,7 @@ main .topbar .filter-bar .clear::before {
     transition: all 0.3s ease-in-out;
 }
 
-main .topbar .filter-bar .clear:hover::before {
+main .filter-bar .clear:hover::before {
     width: 70%;
     left: .2em;
 }
