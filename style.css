@@ -32,10 +32,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-main {
     background-color: var(--light-grayish-cyan-background);
+
 }
 
 main .topbar {
